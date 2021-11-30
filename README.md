@@ -58,6 +58,6 @@ forward passes for smaller networks can be performed in microseconds. However, a
 contribution from the community in this direction is highly encouraged.
 
 ---
-##Author(s)
+## Author(s)
 
 * Siddhant Gangapurwala <siddhant@gangapurwala.com>
