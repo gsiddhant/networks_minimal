@@ -1,0 +1,27 @@
+cmake_minimum_required(VERSION 3.10)
+project(networks_minimal)
+
+set(CMAKE_CXX_STANDARD 17)
+
+# Library Generation Path
+set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/lib)
+
+# Eigen3
+find_package(Eigen3 REQUIRED HINTS ${Eigen3_HINT})
+
+include_directories(${EIGEN3_INCLUDE_DIRS} include)
+
+# Make the shared library
+file(GLOB SOURCES src/*.cpp)
+file(GLOB HEADERS include/${PROJECT_NAME}/*.hpp)
+
+add_library(${PROJECT_NAME} SHARED ${SOURCES} ${HEADERS})
+
+# Test file
+add_executable(boxy_actuation examples/boxy_actuation.cpp)
+target_include_directories(boxy_actuation PUBLIC examples/helpers)
+target_link_libraries(boxy_actuation PUBLIC ${PROJECT_NAME} stdc++fs)
+
+add_executable(a1_actuation examples/a1_actuation.cpp)
+target_include_directories(a1_actuation PUBLIC examples/helpers)
+target_link_libraries(a1_actuation PUBLIC ${PROJECT_NAME} stdc++fs)
