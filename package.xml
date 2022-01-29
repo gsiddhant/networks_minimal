@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>networks_minimal</name>
+  <version>0.1.1</version>
+  <description>NN networks using Eigen</description>
+  <maintainer email="siddhant@gangapurwala.com">Siddhant Gangapurwala</maintainer>
+  <maintainer email="mitch@robots.ox.ac.uk">Alexander Mitchell</maintainer>
+  <license>Proprietary</license>
+  <author email="siddhant@gangapurwala.com">Siddhant Gangapurwala</author>
+  <buildtool_depend>catkin</buildtool_depend>
+  <depend>eigen</depend>
+  <export>
+    <build_type>cmake</build_type>
+  </export>
+</package>

@@ -4,12 +4,14 @@
 #include <iostream>
 #include <experimental/filesystem>
 
+#include "networks_minimal/Config.h"
 #include "Actuation.hpp"
 
 
 int main() {
-    std::string currentPath(std::experimental::filesystem::current_path());
-    std::string parametersDirectory(currentPath + "/../examples/parameters/");
+    std::string currentPath(DIR_PATH);
+    std::string parametersDirectory(currentPath + "/examples/parameters/");
+    std::cout << parametersDirectory << std::endl;
 
     Eigen::MatrixXd networkInputScaling(2, 1);
     networkInputScaling.col(0) << 1., 0.05;

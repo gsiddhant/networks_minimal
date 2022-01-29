@@ -10,6 +10,15 @@ This README assumes that ```$PROJECT_DIR``` refers to the root of this repositor
 ## Build
 To build the shared library and the example executables:
 
+Just pop into a caktin workspace and build as per:
+
+```
+catkin build networks_minimal
+
+```
+
+OR
+
 ```
 cd $PROJECT_DIR
 mkdir build && cd build
@@ -24,6 +33,19 @@ cd $PROJECT_DIR/build
 ./<robot>_actuation
 ```
 Here, ```<robot>``` can either be **a1** or **boxy**.
+
+## To Find Your Network Parameters
+
+The file include/networks_minimal/Config.h defines a variable DIR_PATH, which is the absolute path to $PROJECT_DIR.
+
+Therefore to find the actuator parameters for a1/boxy (see the examples):
+
+```
+#include "networks_minimal/Config.h"
+std::string currentPath(DIR_PATH);
+std::string parametersDirectory(currentPath + "/examples/parameters/");
+std::cout << parametersDirectory << std::endl;
+```
 
 
 ## Parameter Export
