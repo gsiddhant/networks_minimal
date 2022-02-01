@@ -2,6 +2,7 @@
 
 #include "networks_minimal/Activation.hpp"
 
+namespace networks_minimal {
 
 Eigen::MatrixXd Activation::forward(const Eigen::MatrixXd &input) {
     return input;
@@ -62,3 +63,5 @@ Eigen::MatrixXd LeakyReLU::gradient(const Eigen::MatrixXd &input) {
 }
 
 ActivationHandler activation;
+
+};

@@ -14,7 +14,6 @@ Just pop into a caktin workspace and build as per:
 
 ```
 catkin build networks_minimal
-
 ```
 
 OR

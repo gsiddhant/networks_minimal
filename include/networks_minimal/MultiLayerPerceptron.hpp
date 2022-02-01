@@ -8,6 +8,8 @@
 
 #include "Activation.hpp"
 
+namespace networks_minimal {
+
 class MultiLayerPerceptron {
 public:
     MultiLayerPerceptron() = delete;
@@ -61,6 +63,8 @@ private:
 
     // Flags
     bool outputActivation_;
+
+};
 
 };
 

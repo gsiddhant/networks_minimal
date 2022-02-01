@@ -5,6 +5,7 @@
 
 #include <Eigen/Dense>
 
+namespace networks_minimal {
 
 class Activation {
 public:
@@ -55,5 +56,7 @@ extern struct ActivationHandler {
     Sigmoid sigmoid;
     LeakyReLU leakyReLu;
 } activation;
+
+};
 
 #endif // ACTIVATION_HPP

@@ -2,6 +2,8 @@
 
 #include "networks_minimal/MultiLayerPerceptron.hpp"
 
+namespace networks_minimal {
+
 MultiLayerPerceptron::MultiLayerPerceptron(const std::vector<unsigned int> &networkLayers,
                                            const std::reference_wrapper <Activation> &networkActivation,
                                            bool outputActivation) {
@@ -162,3 +164,5 @@ const Eigen::MatrixXd &MultiLayerPerceptron::gradient(const Eigen::MatrixXd &net
 const Eigen::MatrixXd &MultiLayerPerceptron::latentLayerOutput(const int &layer) {
     return latentOutput_[layer];
 }
+
+};

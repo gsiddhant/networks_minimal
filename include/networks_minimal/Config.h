@@ -3,7 +3,10 @@
 #ifndef CONFIG_H
 #define CONFIG_H
 
-// #define SOURCE_DIR "${CMAKE_SOURCE_DIR}"
+namespace networks_minimal {
+
 #define DIR_PATH PATH_TO_DIR
+
+};
 
 #endif

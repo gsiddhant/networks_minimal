@@ -8,6 +8,8 @@
 
 #include "Activation.hpp"
 
+namespace networks_minimal {
+
 class GatedRecurrentUnit {
 public:
     GatedRecurrentUnit() = delete;
@@ -52,5 +54,7 @@ private:
     Eigen::MatrixXd rHiddenGatesLatent_, zHiddenGatesLatent_, nHiddenGatesLatent_;
     Eigen::MatrixXd rLatent_, zLatent_, nLatent_;
 };
+
+}
 
 #endif // GATED_RECURRENT_UNIT_HPP

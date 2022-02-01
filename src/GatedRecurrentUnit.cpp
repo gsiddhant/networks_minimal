@@ -2,6 +2,8 @@
 
 #include "networks_minimal/GatedRecurrentUnit.hpp"
 
+namespace networks_minimal {
+
 GatedRecurrentUnit::GatedRecurrentUnit(const unsigned int &inputDimension, const unsigned int &hiddenStateDimension) {
     inputDimension_ = inputDimension;
     hiddenStateDimension_ = hiddenStateDimension;
@@ -142,3 +144,5 @@ void GatedRecurrentUnit::resetNetworkParameters() {
             networkParameters_.row(0).segment(networkParametersOffset, tripledHiddenStateDimension_).data(),
             networkBiases_[1].rows(), networkBiases_[1].cols());
 }
+
+};

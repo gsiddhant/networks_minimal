@@ -6,6 +6,7 @@
 #include "networks_minimal/MultiLayerPerceptron.hpp"
 #include "networks_minimal/GatedRecurrentUnit.hpp"
 
+namespace networks_minimal {
 
 class Actuation {
 public:
@@ -81,6 +82,8 @@ private:
     Eigen::VectorXd effectiveActuation_;
 
     int actuatorCount_;
+};
+
 };
 
 #endif // ACTUATION_HPP

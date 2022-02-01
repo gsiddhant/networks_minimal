@@ -7,6 +7,7 @@
 #include "networks_minimal/Config.h"
 #include "Actuation.hpp"
 
+using namespace networks_minimal;
 
 int main() {
     std::string currentPath(DIR_PATH);
