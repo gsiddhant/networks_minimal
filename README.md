@@ -8,18 +8,10 @@ This README assumes that ```$PROJECT_DIR``` refers to the root of this repositor
 
 
 ## Build
-To build the shared library:
-
-```
-cd $PROJECT_DIR
-mkdir build && cd build
-cmake .. -DCMAKE_BUILD_TYPE=Release
-make
-```
-
-This will generate a shared library at ```$PROJECT_DIR/lib```. The ```master``` branch
-of the repository only contains the header and source files necessary for building the
-library. 
+The current ```header``` branch
+of the repository contains the header-only implementation which does not
+require building the
+library. For a library version, use the branch ```master``` of this repository.
 
 For example usage, switch to ```example``` branch first. 
 ```
@@ -27,7 +19,7 @@ cd $PROJECT_DIR
 git checkout example
 ```
 
-After rebuilding the library and executables, as shown above, 
+After building the library and executables in the ```$PROJECT_DIR/build``` directory,
 you can execute the examples provided in
 ```$PROJECT_DIR/examples/<robot>_actuation.cpp``` like so:
 ```
