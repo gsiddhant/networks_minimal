@@ -16,12 +16,3 @@ file(GLOB SOURCES src/*.cpp)
 file(GLOB HEADERS include/${PROJECT_NAME}/*.hpp)
 
 add_library(${PROJECT_NAME} SHARED ${SOURCES} ${HEADERS})
-
-# Test file
-add_executable(boxy_actuation examples/boxy_actuation.cpp)
-target_include_directories(boxy_actuation PUBLIC examples/helpers)
-target_link_libraries(boxy_actuation PUBLIC ${PROJECT_NAME} stdc++fs)
-
-add_executable(a1_actuation examples/a1_actuation.cpp)
-target_include_directories(a1_actuation PUBLIC examples/helpers)
-target_link_libraries(a1_actuation PUBLIC ${PROJECT_NAME} stdc++fs)
