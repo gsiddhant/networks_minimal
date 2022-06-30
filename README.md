@@ -8,7 +8,7 @@ This README assumes that ```$PROJECT_DIR``` refers to the root of this repositor
 
 
 ## Build
-To build the shared library and the example executables:
+To build the shared library:
 
 ```
 cd $PROJECT_DIR
@@ -17,14 +17,24 @@ cmake .. -DCMAKE_BUILD_TYPE=Release
 make
 ```
 
-This will generate a shared library at ```$PROJECT_DIR/lib```. To execute the examples provided in
-```$PROJECT_DIR/examples/<robot>_actuation.cpp```:
+This will generate a shared library at ```$PROJECT_DIR/lib```. The ```master``` branch
+of the repository only contains the header and source files necessary for building the
+library. 
+
+For example usage, switch to ```example``` branch first. 
+```
+cd $PROJECT_DIR
+git checkout example
+```
+
+After rebuilding the library and executables, as shown above, 
+you can execute the examples provided in
+```$PROJECT_DIR/examples/<robot>_actuation.cpp``` like so:
 ```
 cd $PROJECT_DIR/build
 ./<robot>_actuation
 ```
 Here, ```<robot>``` can either be **a1** or **boxy**.
-
 
 ## Parameter Export
 Example code to export PyTorch network parameters is provided in 
